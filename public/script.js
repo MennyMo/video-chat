@@ -1,4 +1,4 @@
-const socket = io('http://localhost:3030');
+const socket = io('https://videochat.enyata.com/');
 const videoGrid = document.getElementById("video-grid");
 const myVideo = document.createElement("video");
 const showChat = document.querySelector("#showChat");
@@ -126,6 +126,8 @@ inviteButton.addEventListener("click", (e) => {
     "Copy this link and send it to people you want to meet with",
     window.location.href
   );
+  console.log(window.location.href);
+
 });
 
 socket.on("createMessage", (message, userName) => {
